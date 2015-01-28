@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="org.jorgechato.Contact">
+  <grid id="27dc6" binding="panel1" default-binding="true" layout-manager="FlowLayout" hgap="0" vgap="0" flow-align="0">
+    <constraints>
+      <xy x="20" y="20" width="500" height="400"/>
+    </constraints>
+    <properties>
+      <maximumSize width="180" height="75"/>
+      <minimumSize width="180" height="75"/>
+      <preferredSize width="180" height="75"/>
+    </properties>
+    <border type="none"/>
+    <children>
+      <component id="aafcf" class="com.bolivia.label.CLabel" binding="word">
+        <constraints/>
+        <properties>
+          <font size="28"/>
+          <foreground color="-1580066"/>
+          <horizontalAlignment value="0"/>
+          <horizontalTextPosition value="0"/>
+          <lineBorder value="0"/>
+          <maximumSize width="55" height="55"/>
+          <minimumSize width="55" height="55"/>
+          <opaque value="true"/>
+          <preferredSize width="55" height="55"/>
+          <text value="J"/>
+          <visible value="true"/>
+        </properties>
+      </component>
+      <component id="f858" class="javax.swing.JLabel" binding="name">
+        <constraints/>
+        <properties>
+          <foreground color="-13816531"/>
+          <horizontalAlignment value="0"/>
+          <horizontalTextPosition value="0"/>
+          <maximumSize width="78" height="75"/>
+          <minimumSize width="78" height="75"/>
+          <preferredSize width="78" height="75"/>
+          <text value="Jorge"/>
+        </properties>
+      </component>
+      <grid id="1aa2b" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+        <constraints/>
+        <properties>
+          <maximumSize width="47" height="75"/>
+          <minimumSize width="47" height="75"/>
+          <preferredSize width="47" height="55"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <component id="ffcea" class="com.bolivia.label.CLabel" binding="connected">
+            <constraints/>
+            <properties>
+              <background color="-47038"/>
+              <font/>
+              <foreground color="-47038"/>
+              <horizontalAlignment value="0"/>
+              <horizontalTextPosition value="0"/>
+              <lineBorder value="0"/>
+              <maximumSize width="10" height="10"/>
+              <minimumSize width="10" height="10"/>
+              <opaque value="true"/>
+              <preferredSize width="10" height="10"/>
+              <text value=""/>
+            </properties>
+          </component>
+          <component id="27604" class="javax.swing.JLabel" binding="typing">
+            <constraints/>
+            <properties>
+              <font size="9"/>
+              <foreground color="-8532672"/>
+              <maximumSize width="47" height="21"/>
+              <minimumSize width="47" height="21"/>
+              <preferredSize width="47" height="21"/>
+              <text value="Typing..."/>
+              <visible value="false"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+    </children>
+  </grid>
+</form>

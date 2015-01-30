@@ -17,12 +17,17 @@ public class Contact implements MouseListener{
     private JLabel name;
     private CLabel connected;
     private JLabel typing;
-    private static final String GREEN = "7dcd40";
-    private static final String RED = "ff4842";
+    public static final String GREEN = "7dcd40";
+    public static final String RED = "ff4842";
     private String [] color;
     private boolean con;
+    private String nick;
+    private String COLOR ;
 
-    public Contact(){
+    public Contact(String nick){
+//        this.window = window;
+        this.nick = nick;
+
         color = new String[20];
         color[0] = "F44336";
         color[1] = "E91E63";
@@ -46,10 +51,28 @@ public class Contact implements MouseListener{
         color[19] = "000000";
 
         Random ran = new Random();
-        word.setBackground(Color.decode("#" + color[ran.nextInt(20)]));
+
+        COLOR = "#" + color[ran.nextInt(20)];
+        word.setBackground(Color.decode(COLOR));
+        connected.setBackground(Color.decode("#" + GREEN));
+
+        name.setText(nick);
+        word.setText(String.valueOf(nick.charAt(0)).toUpperCase());
 
         panel1.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
         panel1.addMouseListener(this);
+    }
+
+    public String getCOLOR() {
+        return COLOR;
+    }
+
+    public JLabel getName() {
+        return name;
+    }
+
+    public String getNick() {
+        return nick;
     }
 
     public JPanel getPanel1() {

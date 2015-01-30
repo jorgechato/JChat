@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="org.jorgechato.Connection">
+  <grid id="27dc6" binding="panel1" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+    <constraints>
+      <xy x="20" y="20" width="500" height="400"/>
+    </constraints>
+    <properties>
+      <focusable value="false"/>
+      <maximumSize width="300" height="115"/>
+      <minimumSize width="300" height="115"/>
+      <preferredSize width="300" height="115"/>
+      <requestFocusEnabled value="true"/>
+    </properties>
+    <border type="none"/>
+    <children>
+      <component id="4812d" class="javax.swing.JLabel">
+        <constraints/>
+        <properties>
+          <text value="Host"/>
+        </properties>
+      </component>
+      <component id="4a616" class="javax.swing.JTextField" binding="txthost">
+        <constraints/>
+        <properties>
+          <maximumSize width="250" height="29"/>
+          <minimumSize width="250" height="29"/>
+          <preferredSize width="250" height="29"/>
+        </properties>
+      </component>
+      <component id="e22c2" class="javax.swing.JLabel">
+        <constraints/>
+        <properties>
+          <text value="Nick"/>
+        </properties>
+      </component>
+      <component id="a28e0" class="javax.swing.JTextField" binding="txtName">
+        <constraints/>
+        <properties>
+          <maximumSize width="250" height="29"/>
+          <minimumSize width="250" height="29"/>
+          <preferredSize width="250" height="29"/>
+        </properties>
+      </component>
+      <component id="1e860" class="javax.swing.JButton" binding="accept">
+        <constraints/>
+        <properties>
+          <borderPainted value="false"/>
+          <contentAreaFilled value="false"/>
+          <icon value="checkmark2.png"/>
+          <maximumSize width="29" height="29"/>
+          <minimumSize width="29" height="29"/>
+          <preferredSize width="100" height="29"/>
+          <requestFocusEnabled value="false"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="f9c5c" class="javax.swing.JButton" binding="cancel">
+        <constraints/>
+        <properties>
+          <borderPainted value="false"/>
+          <contentAreaFilled value="false"/>
+          <defaultCapable value="true"/>
+          <icon value="close.png"/>
+          <maximumSize width="29" height="29"/>
+          <minimumSize width="29" height="29"/>
+          <preferredSize width="100" height="29"/>
+          <requestFocusEnabled value="false"/>
+          <text value=""/>
+        </properties>
+      </component>
+    </children>
+  </grid>
+</form>

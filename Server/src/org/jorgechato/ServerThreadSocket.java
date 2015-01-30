@@ -18,7 +18,6 @@ public class ServerThreadSocket {
             while (server.isConnected()){
                 customer = new Customer(server.listen(),server);
                 server.addCustomer(customer);
-                customer.getWriter().println("/server Nuevo cliente conectado");
                 customer.start();
             }
         } catch (IOException e) {

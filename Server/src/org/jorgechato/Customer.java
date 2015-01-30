@@ -39,25 +39,24 @@ public class Customer extends Thread {
     @Override
     public void run() {
         writer.println("/server Tu eres " + socket.getInetAddress().getHostName());
-        writer.println("/server Escribe tu nick");
         try{
             String nick = reader.readLine();
             setNik(nick);
-            writer.println("/server Bienvenido " + nick);
             writer.println("/server Hay " + server.numCustomer() + " usuarios conectados");
-            writer.println("/server Cuando escribas '/quit', abandonaras la conexión");
 
             server.sendAllNicksToAllUsers();
             String line = null;
             while ((line = reader.readLine()) != null){
                 if (line.equals("/quit")){
-                    writer.println("/server Saliendo");
                     socket.close();
                     server.removeCustomer(this);
                     break;
                 }
-
-                server.sendToAll("/users " + nick + line);
+                if (line.equals("/typing")){
+                    server.sendToAll("/typing " + nick);
+                }
+                if (line.startsWith("/users"))
+                    server.sendToAll("/users " + nick + " " + line);
             }
         }catch (IOException e){
             e.printStackTrace();

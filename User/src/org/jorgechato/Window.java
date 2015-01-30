@@ -19,7 +19,6 @@ import java.net.Socket;
  * Created by jorge on 28/01/15.
  */
 public class Window implements ActionListener,MouseListener{
-    private JScrollPane contacts;
     private JPanel chat;
     private JPanel panel1;
     private JPanel contactsRow;
@@ -34,7 +33,7 @@ public class Window implements ActionListener,MouseListener{
     private static int PORT = 6633;
     private PrintWriter out;
     private BufferedReader in;
-    private String nickName;
+    private String nickName,color;
     private static JFrame frame;
 
     public static void main(String[] args) {
@@ -117,8 +116,9 @@ public class Window implements ActionListener,MouseListener{
             public void run() {
                 String host = Connection.getHost();
                 nickName = Connection.getNickname();
+                color = Connection.getColor();
 
-                serverConnection(host,nickName);
+                serverConnection(host,nickName,color);
                 String name = "",typing = "";
 
                 while (Connection.isConnectionAcepted()) {
@@ -147,10 +147,10 @@ public class Window implements ActionListener,MouseListener{
             private void sendToAll(String message) {
                 String mess [] = message.split(" ");
                 String conver = "";
-                for (int i = 3; i < mess.length; i++) {
+                for (int i = 4; i < mess.length; i++) {
                     conver += mess[i]+" ";
                 }
-                Message message1 = new Message("2196F3",mess[1],conver);
+                Message message1 = new Message(mess[2],mess[1],conver);
                 if (mess [1].equals(nickName)) {
                     message1.getMessage().setHorizontalAlignment(SwingConstants.RIGHT);
                     message1.getNick().setHorizontalAlignment(SwingConstants.RIGHT);
@@ -166,9 +166,9 @@ public class Window implements ActionListener,MouseListener{
                     typeVector = type.split(" ");
                 }
                 contactsRow.removeAll();
-                for (int i = 1; i < niksVector.length; i++) {
+                for (int i = 1; i < niksVector.length; i += 2) {
                     if (!nickName.equals(niksVector[i])) {
-                        Contact contact = new Contact(niksVector[i]);
+                        Contact contact = new Contact(niksVector[i],niksVector[i+1]);
                         if (type != null){
                             for (int j = 1; j < typeVector.length; j++) {
                                 if (niksVector[i].equals(typeVector[j]))
@@ -183,7 +183,7 @@ public class Window implements ActionListener,MouseListener{
         });thread.start();
     }
 
-    public void serverConnection(String host,String nick) {
+    public void serverConnection(String host,String nick, String color) {
         try {
             socket = new Socket(host, PORT);
             out = new PrintWriter(socket.getOutputStream(), true);
@@ -191,6 +191,7 @@ public class Window implements ActionListener,MouseListener{
             Connection.setConnectionAcepted(true);
 
             out.println(nick);
+            out.println(color);
             frame.setTitle("Hey "+nickName.toUpperCase()+" !");
         }catch (IOException e) {
             e.printStackTrace();

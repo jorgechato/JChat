@@ -45,7 +45,7 @@ public class Main {
     public String getAllNicks(){
         String nicks = "/nick,";
         for (Customer customer : arrayCustomer){
-            nicks += customer.getNik()+",";
+            nicks += customer.getNik()+","+ customer.getColor() +",";
         }
         return nicks;
     }

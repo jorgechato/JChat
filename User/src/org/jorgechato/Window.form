@@ -2,7 +2,7 @@
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="org.jorgechato.Window">
   <grid id="27dc6" binding="panel1" layout-manager="FormLayout">
     <rowspec value="fill:p:grow"/>
-    <colspec value="fill:p:grow"/>
+    <colspec value="fill:d:grow"/>
     <colspec value="left:4dlu:noGrow"/>
     <colspec value="fill:max(d;4px):noGrow"/>
     <colspec value="left:4dlu:noGrow"/>
@@ -17,30 +17,6 @@
     </properties>
     <border type="none"/>
     <children>
-      <scrollpane id="b76cb" binding="contacts">
-        <constraints>
-          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
-          <forms defaultalign-horz="false" defaultalign-vert="false"/>
-        </constraints>
-        <properties>
-          <maximumSize width="200" height="550"/>
-          <minimumSize width="200" height="550"/>
-          <preferredSize width="200" height="550"/>
-        </properties>
-        <border type="none"/>
-        <children>
-          <grid id="7ac4b" binding="contactsRow" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
-            <constraints/>
-            <properties>
-              <maximumSize width="180" height="550"/>
-              <minimumSize width="180" height="550"/>
-              <preferredSize width="180" height="550"/>
-            </properties>
-            <border type="none"/>
-            <children/>
-          </grid>
-        </children>
-      </scrollpane>
       <grid id="8af30" binding="chat" layout-manager="BorderLayout" hgap="0" vgap="0">
         <constraints>
           <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
@@ -131,18 +107,20 @@
             <constraints border-constraint="Center"/>
             <properties>
               <autoscrolls value="false"/>
-              <maximumSize width="500" height="550"/>
-              <minimumSize width="500" height="550"/>
-              <preferredSize width="500" height="550"/>
+              <horizontalScrollBarPolicy value="31"/>
+              <maximumSize width="500" height="32767"/>
+              <minimumSize width="0" height="0"/>
+              <preferredSize width="0" height="0"/>
+              <verticalScrollBarPolicy value="22"/>
             </properties>
             <border type="none"/>
             <children>
               <grid id="f9e30" binding="chatArea" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
                 <constraints/>
                 <properties>
-                  <maximumSize width="480" height="500"/>
-                  <minimumSize width="480" height="500"/>
-                  <preferredSize width="480" height="500"/>
+                  <maximumSize width="480" height="32767"/>
+                  <minimumSize width="0" height="0"/>
+                  <preferredSize width="480" height="0"/>
                 </properties>
                 <border type="none"/>
                 <children/>
@@ -151,6 +129,26 @@
           </scrollpane>
         </children>
       </grid>
+      <scrollpane id="6fdda">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <forms defaultalign-horz="false" defaultalign-vert="false"/>
+        </constraints>
+        <properties>
+          <maximumSize width="200" height="32767"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <grid id="98783" binding="contactsRow" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+            <constraints/>
+            <properties>
+              <preferredSize width="200" height="10"/>
+            </properties>
+            <border type="none"/>
+            <children/>
+          </grid>
+        </children>
+      </scrollpane>
     </children>
   </grid>
 </form>

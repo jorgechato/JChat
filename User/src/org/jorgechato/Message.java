@@ -12,7 +12,7 @@ public class Message {
     private JLabel message;
 
     public Message(String color, String nick, String message){
-        this.nick.setForeground(Color.decode("#" + color));
+        this.nick.setForeground(Color.decode(color));
         this.nick.setText(nick);
         this.message.setText(message);
     }

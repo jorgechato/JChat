@@ -14,7 +14,7 @@ public class Customer extends Thread {
     private PrintWriter writer;
     private BufferedReader reader;
     private Main server;
-    private String nik,pass;
+    private String nik,pass,color;
 
     public Customer(Socket socket,Main server) throws IOException{
         this.socket = socket;
@@ -36,12 +36,22 @@ public class Customer extends Thread {
         this.nik = nik;
     }
 
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
     @Override
     public void run() {
         writer.println("/server Tu eres " + socket.getInetAddress().getHostName());
         try{
             String nick = reader.readLine();
             setNik(nick);
+            String color = reader.readLine();
+            setColor(color);
             writer.println("/server Hay " + server.numCustomer() + " usuarios conectados");
 
             server.sendAllNicksToAllUsers();
@@ -56,7 +66,7 @@ public class Customer extends Thread {
                     server.sendToAll("/typing " + nick);
                 }
                 if (line.startsWith("/users"))
-                    server.sendToAll("/users " + nick + " " + line);
+                    server.sendToAll("/users " + nick + " " + color + " " +line);
             }
         }catch (IOException e){
             e.printStackTrace();

@@ -4,6 +4,7 @@ import com.bolivia.label.CLabel;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
@@ -32,6 +33,8 @@ public class Contact implements MouseListener{
 
         panel1.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
         panel1.addMouseListener(this);
+        panel1.addMouseListener(new MouseAdapter() {
+        });
     }
 
     public JLabel getName() {
@@ -52,11 +55,7 @@ public class Contact implements MouseListener{
 
     @Override
     public void mouseClicked(MouseEvent mouseEvent) {
-        if (con) {
-            connected.setBackground(Color.decode("#" + RED ));
-        }else {
-            connected.setBackground(Color.decode("#" + GREEN));
-        }con = !con;
+
     }
 
     @Override
@@ -66,7 +65,6 @@ public class Contact implements MouseListener{
 
     @Override
     public void mouseReleased(MouseEvent mouseEvent) {
-
     }
 
     @Override

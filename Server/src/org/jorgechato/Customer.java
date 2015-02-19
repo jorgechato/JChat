@@ -44,12 +44,22 @@ public class Customer extends Thread {
         this.color = color;
     }
 
+    public String getPass() {
+        return pass;
+    }
+
+    public void setPass(String pass) {
+        this.pass = pass;
+    }
+
     @Override
     public void run() {
         writer.println("/server Tu eres " + socket.getInetAddress().getHostName());
         try{
             String nick = reader.readLine();
             setNik(nick);
+            String pass = reader.readLine();
+            setPass(pass);
             String color = reader.readLine();
             setColor(color);
             writer.println("/server Hay " + server.numCustomer() + " usuarios conectados");
@@ -60,6 +70,7 @@ public class Customer extends Thread {
                 if (line.equals("/quit")){
                     socket.close();
                     server.removeCustomer(this);
+                    server.sendAllNicksToAllUsers();
                     break;
                 }
                 if (line.equals("/typing")){
@@ -68,8 +79,10 @@ public class Customer extends Thread {
                 if (line.startsWith("/users"))
                     server.sendToAll("/users " + nick + " " + color + " " +line);
             }
-        }catch (IOException e){
-            e.printStackTrace();
+        }catch (Exception e){
+//            e.printStackTrace();
+            server.removeCustomer(this);
+            server.sendAllNicksToAllUsers();
         }
     }
 }

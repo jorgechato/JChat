@@ -4,15 +4,13 @@ import com.bolivia.label.CLabel;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
+import java.awt.event.*;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.Socket;
+import java.util.ArrayList;
 
 
 /**
@@ -35,6 +33,7 @@ public class Window implements ActionListener,MouseListener{
     private BufferedReader in;
     private String nickName,color;
     private static JFrame frame;
+    private ArrayList<Contact> arrayUser;
 
     public static void main(String[] args) {
         frame = new JFrame("JChat");
@@ -54,7 +53,21 @@ public class Window implements ActionListener,MouseListener{
         disconnect.addActionListener(this);
         isConected.setBackground(Color.decode("#" + Contact.GREEN));
 
+        chatArea.setLayout(new BoxLayout(chatArea,BoxLayout.Y_AXIS));
+        contactsRow.setLayout(new BoxLayout(contactsRow,BoxLayout.Y_AXIS));
+
+        arrayUser = new ArrayList<Contact>();
+
         isConnected();
+
+
+        textField1.addKeyListener(new KeyAdapter() {
+            @Override
+            public void keyReleased(KeyEvent e) {
+                if (!textField1.getText().equals("") && Connection.isConnectionAcepted())
+                    out.println("/typing");
+            }
+        });
     }
 
     @Override
@@ -85,10 +98,6 @@ public class Window implements ActionListener,MouseListener{
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
                 led();
-                if(Connection.isConnectionAcepted())
-                    out.println("/allniks");
-                if (!textField1.getText().equals("") && Connection.isConnectionAcepted())
-                    out.println("/typing");
             }
 
             private void led() {
@@ -107,6 +116,16 @@ public class Window implements ActionListener,MouseListener{
             }
         });timer.start();
 
+
+        Timer usersOnLine = new Timer(500, new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+
+                if(Connection.isConnectionAcepted())
+                    out.println("/allniks");
+            }
+        });usersOnLine.start();
+
         return connected;
     }
 
@@ -117,8 +136,9 @@ public class Window implements ActionListener,MouseListener{
                 String host = Connection.getHost();
                 nickName = Connection.getNickname();
                 color = Connection.getColor();
+                char [] pass = Connection.getPass();
 
-                serverConnection(host,nickName,color);
+                serverConnection(host,nickName,color,pass);
                 String name = "",typing = "";
 
                 while (Connection.isConnectionAcepted()) {
@@ -138,8 +158,8 @@ public class Window implements ActionListener,MouseListener{
 
                         if (conversation.startsWith("/users"))
                             sendToAll(conversation);
-                    } catch (IOException e) {
-                        e.printStackTrace();
+                    } catch (Exception e) {
+                        Connection.setConnectionAcepted(false);
                     }
                 }
             }
@@ -160,30 +180,31 @@ public class Window implements ActionListener,MouseListener{
             }
 
             private void getNicks(String name, String type) {
-                String niksVector []= name.split(",");
+                String niksVector []= name.split(",");/*
                 String typeVector [] = null;
                 if (type != null) {
                     typeVector = type.split(" ");
-                }
-                contactsRow.removeAll();
+                }*/
+//                contactsRow.removeAll();
                 for (int i = 1; i < niksVector.length; i += 2) {
                     if (!nickName.equals(niksVector[i])) {
                         Contact contact = new Contact(niksVector[i],niksVector[i+1]);
-                        if (type != null){
+                        arrayUser.add(contact);
+                        /*if (type != null){
                             for (int j = 1; j < typeVector.length; j++) {
                                 if (niksVector[i].equals(typeVector[j]))
                                     contact.getTyping().setVisible(true);
                             }
-                        }
-                        contactsRow.add(contact.getPanel1());
+                        }*/
+//                        contactsRow.add(contact.getPanel1());
                     }
                 }
-                contactsRow.updateUI();
+//                contactsRow.updateUI();
             }
         });thread.start();
     }
 
-    public void serverConnection(String host,String nick, String color) {
+    public void serverConnection(String host,String nick, String color, char [] pass) {
         try {
             socket = new Socket(host, PORT);
             out = new PrintWriter(socket.getOutputStream(), true);
@@ -191,6 +212,7 @@ public class Window implements ActionListener,MouseListener{
             Connection.setConnectionAcepted(true);
 
             out.println(nick);
+            out.println(pass);
             out.println(color);
             frame.setTitle("Hey "+nickName.toUpperCase()+" !");
         }catch (IOException e) {

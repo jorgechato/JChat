@@ -14,7 +14,7 @@
       <component id="aafcf" class="com.bolivia.label.CLabel" binding="word">
         <constraints/>
         <properties>
-          <font size="28"/>
+          <font name="Roboto" size="28"/>
           <foreground color="-1580066"/>
           <horizontalAlignment value="0"/>
           <horizontalTextPosition value="0"/>

@@ -18,7 +18,11 @@ public class Connection extends JDialog implements ActionListener{
     private JButton accept;
     private JButton cancel;
     private JTextField txtName;
-    private static String host,nickname,color;
+    private JPasswordField txtPass;
+    private static String host;
+    private static String nickname;
+    private static String color;
+    private static char[] pass;
     private static boolean connectionAcepted;
     private Window window;
     private String [] colorVector;
@@ -83,6 +87,8 @@ public class Connection extends JDialog implements ActionListener{
 
         Random ran = new Random();
         txtName.setText(name[ran.nextInt(10)]);
+
+        txtPass.setText("1234");
     }
 
     public JPanel getPanel1() {
@@ -124,6 +130,7 @@ public class Connection extends JDialog implements ActionListener{
         }
         host = txthost.getText();
         nickname = txtName.getText();
+        pass = txtPass.getPassword();
         window.connectToServer();
         setVisible(false);
     }
@@ -134,5 +141,9 @@ public class Connection extends JDialog implements ActionListener{
 
     public static String getHost() {
         return host;
+    }
+
+    public static char[] getPass() {
+        return pass;
     }
 }

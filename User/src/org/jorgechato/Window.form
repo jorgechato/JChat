@@ -103,25 +103,14 @@
               </component>
             </children>
           </grid>
-          <scrollpane id="eb030">
+          <scrollpane id="e6a2">
             <constraints border-constraint="Center"/>
-            <properties>
-              <autoscrolls value="false"/>
-              <horizontalScrollBarPolicy value="31"/>
-              <maximumSize width="500" height="32767"/>
-              <minimumSize width="0" height="0"/>
-              <preferredSize width="0" height="0"/>
-              <verticalScrollBarPolicy value="22"/>
-            </properties>
+            <properties/>
             <border type="none"/>
             <children>
-              <grid id="f9e30" binding="chatArea" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+              <grid id="7270e" binding="chatArea" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
                 <constraints/>
-                <properties>
-                  <maximumSize width="480" height="32767"/>
-                  <minimumSize width="0" height="0"/>
-                  <preferredSize width="480" height="0"/>
-                </properties>
+                <properties/>
                 <border type="none"/>
                 <children/>
               </grid>
@@ -129,21 +118,17 @@
           </scrollpane>
         </children>
       </grid>
-      <scrollpane id="6fdda">
+      <scrollpane id="2b82c">
         <constraints>
           <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
           <forms defaultalign-horz="false" defaultalign-vert="false"/>
         </constraints>
-        <properties>
-          <maximumSize width="200" height="32767"/>
-        </properties>
+        <properties/>
         <border type="none"/>
         <children>
-          <grid id="98783" binding="contactsRow" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+          <grid id="49d3b" binding="contactsRow" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
             <constraints/>
-            <properties>
-              <preferredSize width="200" height="10"/>
-            </properties>
+            <properties/>
             <border type="none"/>
             <children/>
           </grid>

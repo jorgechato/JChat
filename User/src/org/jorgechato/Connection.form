@@ -6,9 +6,9 @@
     </constraints>
     <properties>
       <focusable value="false"/>
-      <maximumSize width="300" height="115"/>
-      <minimumSize width="300" height="115"/>
-      <preferredSize width="300" height="115"/>
+      <maximumSize width="300" height="150"/>
+      <minimumSize width="300" height="150"/>
+      <preferredSize width="300" height="150"/>
       <requestFocusEnabled value="true"/>
     </properties>
     <border type="none"/>
@@ -34,6 +34,20 @@
         </properties>
       </component>
       <component id="a28e0" class="javax.swing.JTextField" binding="txtName">
+        <constraints/>
+        <properties>
+          <maximumSize width="250" height="29"/>
+          <minimumSize width="250" height="29"/>
+          <preferredSize width="250" height="29"/>
+        </properties>
+      </component>
+      <component id="74224" class="javax.swing.JLabel">
+        <constraints/>
+        <properties>
+          <text value="Pass"/>
+        </properties>
+      </component>
+      <component id="ae678" class="javax.swing.JPasswordField" binding="txtPass">
         <constraints/>
         <properties>
           <maximumSize width="250" height="29"/>

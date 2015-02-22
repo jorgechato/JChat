@@ -103,7 +103,7 @@
               </component>
             </children>
           </grid>
-          <scrollpane id="e6a2">
+          <scrollpane id="e6a2" binding="scrollarea">
             <constraints border-constraint="Center"/>
             <properties/>
             <border type="none"/>

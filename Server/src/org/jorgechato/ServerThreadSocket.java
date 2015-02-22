@@ -12,6 +12,8 @@ public class ServerThreadSocket {
         Main server = new Main(PORT);
         Customer customer = null;
 
+        Main.loadLog();
+
         try{
             server.connect();
 

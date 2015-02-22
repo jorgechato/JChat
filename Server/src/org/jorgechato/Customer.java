@@ -1,5 +1,9 @@
 package org.jorgechato;
 
+import org.apache.log4j.FileAppender;
+import org.apache.log4j.Logger;
+import org.apache.log4j.PatternLayout;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -15,6 +19,8 @@ public class Customer extends Thread {
     private BufferedReader reader;
     private Main server;
     private String nik,pass,color;
+    private boolean outcast;
+    public static Logger log4j = Logger.getLogger(Customer.class.getName());
 
     public Customer(Socket socket,Main server) throws IOException{
         this.socket = socket;
@@ -22,6 +28,12 @@ public class Customer extends Thread {
 
         writer = new PrintWriter(socket.getOutputStream(),true);
         reader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+
+        try {
+            log4j.addAppender(new FileAppender(new PatternLayout(), "JChat.log", true));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     public String getNik() {
@@ -62,7 +74,9 @@ public class Customer extends Thread {
             setPass(pass);
             String color = reader.readLine();
             setColor(color);
-            writer.println("/server Hay " + server.numCustomer() + " usuarios conectados");
+
+            log4j.info("Nuevo usuario: "+nick);
+//            writer.println("/server Hay " + server.numCustomer() + " usuarios conectados");
 
             server.sendAllNicksToAllUsers();
             String line = null;
@@ -71,13 +85,18 @@ public class Customer extends Thread {
                     socket.close();
                     server.removeCustomer(this);
                     server.sendAllNicksToAllUsers();
+                    log4j.info("Usuario desconectado: "+nick);
                     break;
                 }
-                if (line.equals("/typing")){
+                else if (line.equals("/typing")){
                     server.sendToAll("/typing " + nick);
                 }
-                if (line.startsWith("/users"))
-                    server.sendToAll("/users " + nick + " " + color + " " +line);
+                else if (line.startsWith("/users")) {
+                    server.sendToAll("/users " + nick + " " + color + " " + line);
+                }
+                else if (line.startsWith("/allniks")) {
+                    server.sendAllNicksToAllUsers();
+                }
             }
         }catch (Exception e){
 //            e.printStackTrace();

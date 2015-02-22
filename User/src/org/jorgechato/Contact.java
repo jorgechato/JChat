@@ -19,10 +19,10 @@ public class Contact implements MouseListener{
     private JLabel typing;
     public static final String GREEN = "7dcd40";
     public static final String RED = "ff4842";
-    private boolean con;
     private String nick,color;
+    private boolean blacklist;
 
-    public Contact(String nick,String color){
+    public Contact(String nick, String color){
         this.nick = nick;
         this.color = color;
         word.setBackground(Color.decode(color));
@@ -30,10 +30,15 @@ public class Contact implements MouseListener{
 
         name.setText(nick);
         word.setText(String.valueOf(nick.charAt(0)).toUpperCase());
+        typing.setVisible(false);
 
         panel1.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
-        panel1.addMouseListener(this);
+        connected.addMouseListener(this);
         panel1.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+
+            }
         });
     }
 
@@ -55,7 +60,15 @@ public class Contact implements MouseListener{
 
     @Override
     public void mouseClicked(MouseEvent mouseEvent) {
-
+        if (!blacklist){
+            connected.setBackground(Color.decode("#" + RED));
+            Window.addToBlackList(this);
+            blacklist = true;
+        }else {
+            connected.setBackground(Color.decode("#" + GREEN));
+            Window.removeFromBlackList(this);
+            blacklist = false;
+        }
     }
 
     @Override

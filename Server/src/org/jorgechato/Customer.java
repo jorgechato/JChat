@@ -94,6 +94,10 @@ public class Customer extends Thread {
                 else if (line.startsWith("/users")) {
                     server.sendToAll("/users " + nick + " " + color + " " + line);
                 }
+                else if (line.startsWith("/directMessage")) {
+                    String message [] = line.split(";");
+                    server.sendToUser( message[1] ,nick + ";" + color + ";" + message[2]);
+                }
                 else if (line.startsWith("/allniks")) {
                     server.sendAllNicksToAllUsers();
                 }

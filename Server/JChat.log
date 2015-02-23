@@ -891,3 +891,300 @@ Nuevo usuario: Jorge
 Nuevo usuario: Jorge
 Nuevo usuario: Jorge
 16:36:01,793  INFO Customer:78 - Nuevo usuario: Jorge
+Nuevo usuario: Eva
+17:47:41,646  INFO Customer:78 - Nuevo usuario: Eva
+Nuevo usuario: Maria
+Nuevo usuario: Maria
+17:47:48,056  INFO Customer:78 - Nuevo usuario: Maria
+Usuario desconectado: Maria
+Usuario desconectado: Maria
+17:55:02,929  INFO Customer:88 - Usuario desconectado: Maria
+Nuevo usuario: Isabel
+Nuevo usuario: Isabel
+Nuevo usuario: Isabel
+18:03:25,298  INFO Customer:78 - Nuevo usuario: Isabel
+Nuevo usuario: Isabel
+Nuevo usuario: Isabel
+Nuevo usuario: Isabel
+Nuevo usuario: Isabel
+18:03:30,581  INFO Customer:78 - Nuevo usuario: Isabel
+Nuevo usuario: Maria
+Nuevo usuario: Maria
+Nuevo usuario: Maria
+Nuevo usuario: Maria
+Nuevo usuario: Maria
+18:06:18,975  INFO Customer:78 - Nuevo usuario: Maria
+Usuario desconectado: Maria
+Usuario desconectado: Maria
+Usuario desconectado: Maria
+Usuario desconectado: Maria
+Usuario desconectado: Maria
+18:06:36,565  INFO Customer:88 - Usuario desconectado: Maria
+Nuevo usuario: Emma
+Nuevo usuario: Emma
+Nuevo usuario: Emma
+Nuevo usuario: Emma
+Nuevo usuario: Emma
+Nuevo usuario: Emma
+18:06:49,948  INFO Customer:78 - Nuevo usuario: Emma
+Usuario desconectado: Emma
+Usuario desconectado: Emma
+Usuario desconectado: Emma
+Usuario desconectado: Emma
+Usuario desconectado: Emma
+Usuario desconectado: Emma
+18:06:51,830  INFO Customer:88 - Usuario desconectado: Emma
+Nuevo usuario: Jorge
+18:59:15,955  INFO Customer:78 - Nuevo usuario: Jorge
+Nuevo usuario: David
+Nuevo usuario: David
+18:59:49,708  INFO Customer:78 - Nuevo usuario: David
+Usuario desconectado: Jorge
+Usuario desconectado: Jorge
+19:00:13,244  INFO Customer:88 - Usuario desconectado: Jorge
+Usuario desconectado: David
+Usuario desconectado: David
+19:00:15,011  INFO Customer:88 - Usuario desconectado: David
+Nuevo usuario: Irene
+Nuevo usuario: Irene
+Nuevo usuario: Irene
+19:00:41,088  INFO Customer:78 - Nuevo usuario: Irene
+Nuevo usuario: Nacho
+Nuevo usuario: Nacho
+Nuevo usuario: Nacho
+Nuevo usuario: Nacho
+19:00:47,274  INFO Customer:78 - Nuevo usuario: Nacho
+Nuevo usuario: Irene
+Nuevo usuario: Irene
+Nuevo usuario: Irene
+Nuevo usuario: Irene
+Nuevo usuario: Irene
+19:03:23,374  INFO Customer:78 - Nuevo usuario: Irene
+Nuevo usuario: Maria
+19:19:02,721  INFO Customer:78 - Nuevo usuario: Maria
+Nuevo usuario: Isabel
+Nuevo usuario: Isabel
+19:20:22,192  INFO Customer:78 - Nuevo usuario: Isabel
+Nuevo usuario: Isabel
+Nuevo usuario: Isabel
+Nuevo usuario: Isabel
+19:20:30,280  INFO Customer:78 - Nuevo usuario: Isabel
+Nuevo usuario: Irene
+Nuevo usuario: Irene
+Nuevo usuario: Irene
+Nuevo usuario: Irene
+19:20:39,995  INFO Customer:78 - Nuevo usuario: Irene
+Nuevo usuario: Maria
+19:21:52,420  INFO Customer:78 - Nuevo usuario: Maria
+Nuevo usuario: Emma
+Nuevo usuario: Emma
+19:21:57,149  INFO Customer:78 - Nuevo usuario: Emma
+Nuevo usuario: Sofia
+19:22:50,432  INFO Customer:78 - Nuevo usuario: Sofia
+Nuevo usuario: Sofia
+Nuevo usuario: Sofia
+19:22:54,727  INFO Customer:78 - Nuevo usuario: Sofia
+Usuario desconectado: Sofia
+Usuario desconectado: Sofia
+19:22:57,660  INFO Customer:88 - Usuario desconectado: Sofia
+Nuevo usuario: Irene
+Nuevo usuario: Irene
+Nuevo usuario: Irene
+19:23:00,179  INFO Customer:78 - Nuevo usuario: Irene
+Nuevo usuario: Maria
+Nuevo usuario: Maria
+Nuevo usuario: Maria
+Nuevo usuario: Maria
+19:23:11,126  INFO Customer:78 - Nuevo usuario: Maria
+Usuario desconectado: Sofia
+Usuario desconectado: Sofia
+Usuario desconectado: Sofia
+Usuario desconectado: Sofia
+19:24:02,771  INFO Customer:88 - Usuario desconectado: Sofia
+Usuario desconectado: Maria
+Usuario desconectado: Maria
+Usuario desconectado: Maria
+Usuario desconectado: Maria
+19:24:06,435  INFO Customer:88 - Usuario desconectado: Maria
+Nuevo usuario: Daniel
+Nuevo usuario: Daniel
+Nuevo usuario: Daniel
+Nuevo usuario: Daniel
+Nuevo usuario: Daniel
+19:26:02,880  INFO Customer:78 - Nuevo usuario: Daniel
+Nuevo usuario: Eva
+Nuevo usuario: Eva
+Nuevo usuario: Eva
+Nuevo usuario: Eva
+Nuevo usuario: Eva
+Nuevo usuario: Eva
+19:26:08,520  INFO Customer:78 - Nuevo usuario: Eva
+Nuevo usuario: Isabel
+Nuevo usuario: Isabel
+Nuevo usuario: Isabel
+Nuevo usuario: Isabel
+Nuevo usuario: Isabel
+Nuevo usuario: Isabel
+Nuevo usuario: Isabel
+19:31:36,014  INFO Customer:78 - Nuevo usuario: Isabel
+Nuevo usuario: Nacho
+Nuevo usuario: Nacho
+Nuevo usuario: Nacho
+Nuevo usuario: Nacho
+Nuevo usuario: Nacho
+Nuevo usuario: Nacho
+Nuevo usuario: Nacho
+Nuevo usuario: Nacho
+19:31:41,136  INFO Customer:78 - Nuevo usuario: Nacho
+Nuevo usuario: Irene
+19:33:59,142  INFO Customer:78 - Nuevo usuario: Irene
+Nuevo usuario: Jorge
+Nuevo usuario: Jorge
+19:34:03,198  INFO Customer:78 - Nuevo usuario: Jorge
+Nuevo usuario: David
+Nuevo usuario: David
+Nuevo usuario: David
+19:39:31,439  INFO Customer:78 - Nuevo usuario: David
+Nuevo usuario: Irene
+Nuevo usuario: Irene
+Nuevo usuario: Irene
+Nuevo usuario: Irene
+19:39:50,228  INFO Customer:78 - Nuevo usuario: Irene
+Usuario desconectado: Irene
+Usuario desconectado: Irene
+Usuario desconectado: Irene
+Usuario desconectado: Irene
+19:40:20,010  INFO Customer:88 - Usuario desconectado: Irene
+Nuevo usuario: Isabel
+19:41:21,840  INFO Customer:78 - Nuevo usuario: Isabel
+Nuevo usuario: Maria
+Nuevo usuario: Maria
+19:41:26,696  INFO Customer:78 - Nuevo usuario: Maria
+Usuario desconectado: Maria
+Usuario desconectado: Maria
+19:41:37,427  INFO Customer:88 - Usuario desconectado: Maria
+Nuevo usuario: Daniel
+Nuevo usuario: Daniel
+Nuevo usuario: Daniel
+19:41:40,166  INFO Customer:78 - Nuevo usuario: Daniel
+Usuario desconectado: Daniel
+Usuario desconectado: Daniel
+Usuario desconectado: Daniel
+19:41:45,507  INFO Customer:88 - Usuario desconectado: Daniel
+Nuevo usuario: Jorge
+Nuevo usuario: Jorge
+Nuevo usuario: Jorge
+Nuevo usuario: Jorge
+19:41:55,911  INFO Customer:78 - Nuevo usuario: Jorge
+Nuevo usuario: Nacho
+Nuevo usuario: Nacho
+Nuevo usuario: Nacho
+Nuevo usuario: Nacho
+Nuevo usuario: Nacho
+19:41:59,403  INFO Customer:78 - Nuevo usuario: Nacho
+Nuevo usuario: Emma
+19:43:15,868  INFO Customer:78 - Nuevo usuario: Emma
+Nuevo usuario: Nacho
+Nuevo usuario: Nacho
+19:43:21,890  INFO Customer:78 - Nuevo usuario: Nacho
+Nuevo usuario: Isabel
+19:44:10,776  INFO Customer:78 - Nuevo usuario: Isabel
+Nuevo usuario: Irene
+Nuevo usuario: Irene
+19:44:14,443  INFO Customer:78 - Nuevo usuario: Irene
+Usuario desconectado: Irene
+Usuario desconectado: Irene
+19:44:22,323  INFO Customer:88 - Usuario desconectado: Irene
+Nuevo usuario: Eva
+Nuevo usuario: Eva
+Nuevo usuario: Eva
+19:44:25,387  INFO Customer:78 - Nuevo usuario: Eva
+Nuevo usuario: Nacho
+Nuevo usuario: Nacho
+Nuevo usuario: Nacho
+Nuevo usuario: Nacho
+19:44:32,820  INFO Customer:78 - Nuevo usuario: Nacho
+Nuevo usuario: Daniel
+Nuevo usuario: Daniel
+Nuevo usuario: Daniel
+Nuevo usuario: Daniel
+Nuevo usuario: Daniel
+19:47:43,634  INFO Customer:78 - Nuevo usuario: Daniel
+Nuevo usuario: David
+19:48:32,017  INFO Customer:78 - Nuevo usuario: David
+Nuevo usuario: Nacho
+Nuevo usuario: Nacho
+19:48:36,034  INFO Customer:78 - Nuevo usuario: Nacho
+Usuario desconectado: David
+Usuario desconectado: David
+19:49:03,914  INFO Customer:88 - Usuario desconectado: David
+Usuario desconectado: Nacho
+Usuario desconectado: Nacho
+19:49:06,754  INFO Customer:88 - Usuario desconectado: Nacho
+Nuevo usuario: Isabel
+Nuevo usuario: Isabel
+Nuevo usuario: Isabel
+19:49:12,816  INFO Customer:78 - Nuevo usuario: Isabel
+Nuevo usuario: Nacho
+Nuevo usuario: Nacho
+Nuevo usuario: Nacho
+Nuevo usuario: Nacho
+19:49:16,907  INFO Customer:78 - Nuevo usuario: Nacho
+Nuevo usuario: Isabel
+Nuevo usuario: Isabel
+Nuevo usuario: Isabel
+Nuevo usuario: Isabel
+Nuevo usuario: Isabel
+19:53:59,110  INFO Customer:78 - Nuevo usuario: Isabel
+Nuevo usuario: David
+Nuevo usuario: David
+Nuevo usuario: David
+Nuevo usuario: David
+Nuevo usuario: David
+Nuevo usuario: David
+19:54:04,164  INFO Customer:78 - Nuevo usuario: David
+Usuario desconectado: Isabel
+Usuario desconectado: Isabel
+Usuario desconectado: Isabel
+Usuario desconectado: Isabel
+Usuario desconectado: Isabel
+Usuario desconectado: Isabel
+19:55:32,250  INFO Customer:88 - Usuario desconectado: Isabel
+Usuario desconectado: David
+Usuario desconectado: David
+Usuario desconectado: David
+Usuario desconectado: David
+Usuario desconectado: David
+Usuario desconectado: David
+19:55:35,746  INFO Customer:88 - Usuario desconectado: David
+Nuevo usuario: David
+20:07:44,075  INFO Customer:78 - Nuevo usuario: David
+Nuevo usuario: Nacho
+Nuevo usuario: Nacho
+20:07:48,950  INFO Customer:78 - Nuevo usuario: Nacho
+Usuario desconectado: David
+Usuario desconectado: David
+20:08:29,297  INFO Customer:88 - Usuario desconectado: David
+Usuario desconectado: Nacho
+Usuario desconectado: Nacho
+20:08:33,153  INFO Customer:88 - Usuario desconectado: Nacho
+Nuevo usuario: Nacho
+Nuevo usuario: Nacho
+Nuevo usuario: Nacho
+20:08:39,402  INFO Customer:78 - Nuevo usuario: Nacho
+Nuevo usuario: Maria
+Nuevo usuario: Maria
+Nuevo usuario: Maria
+Nuevo usuario: Maria
+20:08:47,327  INFO Customer:78 - Nuevo usuario: Maria
+Nuevo usuario: Nacho
+20:10:21,446  INFO Customer:78 - Nuevo usuario: Nacho
+Nuevo usuario: Sofia
+Nuevo usuario: Sofia
+20:10:25,817  INFO Customer:78 - Nuevo usuario: Sofia
+Usuario desconectado: Sofia
+Usuario desconectado: Sofia
+20:11:20,258  INFO Customer:88 - Usuario desconectado: Sofia
+Usuario desconectado: Nacho
+Usuario desconectado: Nacho
+20:11:22,985  INFO Customer:88 - Usuario desconectado: Nacho

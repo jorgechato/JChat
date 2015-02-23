@@ -21,10 +21,12 @@ public class Contact implements MouseListener{
     public static final String RED = "ff4842";
     private String nick,color;
     private boolean blacklist;
+    private Window window;
 
-    public Contact(String nick, String color){
+    public Contact(final String nick, String color, final Window window){
         this.nick = nick;
         this.color = color;
+        this.window = window;
         word.setBackground(Color.decode(color));
         connected.setBackground(Color.decode("#" + GREEN));
 
@@ -37,7 +39,7 @@ public class Contact implements MouseListener{
         panel1.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-
+                window.addChat(nick);
             }
         });
     }

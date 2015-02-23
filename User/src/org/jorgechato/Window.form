@@ -103,19 +103,28 @@
               </component>
             </children>
           </grid>
-          <scrollpane id="e6a2" binding="scrollarea">
+          <tabbedpane id="d289c" binding="tabbedPane1" default-binding="true">
             <constraints border-constraint="Center"/>
             <properties/>
             <border type="none"/>
             <children>
-              <grid id="7270e" binding="chatArea" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
-                <constraints/>
+              <scrollpane id="d2190" binding="scrollarea">
+                <constraints>
+                  <tabbedpane title="Grupo"/>
+                </constraints>
                 <properties/>
                 <border type="none"/>
-                <children/>
-              </grid>
+                <children>
+                  <grid id="4a955" binding="chatArea" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+                    <constraints/>
+                    <properties/>
+                    <border type="none"/>
+                    <children/>
+                  </grid>
+                </children>
+              </scrollpane>
             </children>
-          </scrollpane>
+          </tabbedpane>
         </children>
       </grid>
       <scrollpane id="2b82c">

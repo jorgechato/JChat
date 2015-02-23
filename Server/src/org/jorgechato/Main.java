@@ -44,6 +44,12 @@ public class Main {
             customer.getWriter().println(message);
         }
     }
+    public void sendToUser(String to,String message){
+        for (Customer customer : arrayCustomer){
+            if (customer.getNik().equalsIgnoreCase(to))
+                customer.getWriter().println("/directMessage;"+message);
+        }
+    }
 
     public String getAllNicks(){
         String nicks = "/nick,";

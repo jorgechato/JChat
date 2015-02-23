@@ -52,7 +52,7 @@ public class ServerThread extends Thread {
                     sendTo = conversation.split(";");
                     boolean spam = false;
                     for (Contact contact1 : window.getOutcast()){
-                        if (contact1.getNick().equalsIgnoreCase(sendTo[2])){
+                        if (contact1.getNick().equalsIgnoreCase(sendTo[1])){
                             spam = true;
                         }
                     }
@@ -70,7 +70,6 @@ public class ServerThread extends Thread {
 
         for (int i = 0 ; i<window.getTabbedPane1().getTabCount() ; i++){
             if (window.getTabbedPane1().getTitleAt(i).equalsIgnoreCase(from)){
-                System.out.println("fda");
                 window.addChat(new Message(color, from, message));
                 sended = true;
             }

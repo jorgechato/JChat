@@ -19,7 +19,7 @@ public class Customer extends Thread {
     private BufferedReader reader;
     private Main server;
     private String nik,pass,color;
-    private boolean outcast;
+    private String ip;
     public static Logger log4j = Logger.getLogger(Customer.class.getName());
 
     public Customer(Socket socket,Main server) throws IOException{
@@ -34,6 +34,14 @@ public class Customer extends Thread {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    public String getIp() {
+        return ip;
+    }
+
+    public void setIp(String ip) {
+        this.ip = ip;
     }
 
     public String getNik() {
@@ -74,6 +82,8 @@ public class Customer extends Thread {
             setPass(pass);
             String color = reader.readLine();
             setColor(color);
+//            System.out.println(socket.getRemoteSocketAddress());
+            setIp(socket.getLocalSocketAddress().toString());
 
             log4j.info("Nuevo usuario: "+nick);
 //            writer.println("/server Hay " + server.numCustomer() + " usuarios conectados");

@@ -110,8 +110,11 @@ public class Window implements ActionListener,MouseListener{
         }
         if (actionEvent.getSource() == send){
             if (Connection.isConnectionAcepted() && !textField1.getText().equals("")) {
-                out.println("/users " + textField1.getText());
-                out.print("/allniks");
+                if (tabbedPane1.getSelectedIndex() == 0) {
+                    out.println("/users " + textField1.getText());
+                }else {
+                    out.println("/directMessage;"+ tabbedPane1.getTitleAt(tabbedPane1.getSelectedIndex()) +";"+ textField1.getText());
+                }
             }
             textField1.setText("");
         }
@@ -150,7 +153,7 @@ public class Window implements ActionListener,MouseListener{
             }
         });timer.start();
 
-/*
+//todo
         Timer usersOnLine = new Timer(500, new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
@@ -158,7 +161,7 @@ public class Window implements ActionListener,MouseListener{
                 if(Connection.isConnectionAcepted() || (Connection.isConnectionAcepted() && textField1.getText().equals("")) )
                     out.println("/allniks");
             }
-        });usersOnLine.start();*/
+        });usersOnLine.start();
 
         return connected;
     }

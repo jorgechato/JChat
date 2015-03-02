@@ -44,6 +44,10 @@ public class Customer extends Thread {
         this.ip = ip;
     }
 
+    public Socket getSocket() {
+        return socket;
+    }
+
     public String getNik() {
         return nik;
     }

@@ -19,8 +19,17 @@ public class ServerThreadSocket {
 
             while (server.isConnected()){
                 customer = new Customer(server.listen(),server);
-                server.addCustomer(customer);
-                customer.start();
+                boolean isConnected = false;
+
+                for (Customer customer1 : server.getArrayCustomer())
+                    if(customer.getSocket().getInetAddress().getHostAddress().equals(customer1.getSocket().getInetAddress().getHostAddress())){
+                        isConnected = true;
+                    }
+
+                if (!isConnected) {
+                    server.addCustomer(customer);
+                    customer.start();
+                }
             }
         } catch (IOException e) {
             e.printStackTrace();

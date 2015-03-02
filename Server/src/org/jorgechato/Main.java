@@ -85,4 +85,8 @@ public class Main {
             System.err.println("Error: " + e.getMessage());
         }
     }
+
+    public ArrayList<Customer> getArrayCustomer() {
+        return arrayCustomer;
+    }
 }
